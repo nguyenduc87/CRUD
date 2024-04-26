@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course 365 - Learning with unlimited!</title>
+
+  <!-- Nhúng các thư viện BS4 & jQuery, awesome font -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <!-- Các file css và js tự định nghĩa thêm -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- 1. Header - Navbar menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="images/Ionic_logo.png" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Browse courses
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="courseMgmt.html" class="nav-link">Course Manager</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- 2. Slide body -->
+  <div class="container-fluid bg-info" style="padding-top: 70px;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="row text-light">
+            <h1>Welcome to Ionic Course365 Learning Center</h1>
+            <p>Ionic Course365 is an online learning and teaching Marketplace with over 5000 courses and 1 milion
+              student. Instructor and expertly crafted courses, designed for the modern studens and entrepreneur</p>
+          </div>
+          <div class="row">
+            <div style="padding-right:20px">
+              <button class="btn btn-warning">Browser Courses</button>
+            </div>
+            <div>
+              <button class="btn btn-light">Become an istructor</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="images/ionic-207965.png" alt="anh-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 3. Courses content Recommend-->
+  <div class="container" style="padding-top: 20px;">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-12">
+          <h2>Recommended to you</h2>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row" id="recommend-course-row">
+      </div>
+    </div>
+  </div>
+  <!-- 3. Courses content Most popular-->
+  <div class="container" style="padding-top: 20px;">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-12">
+          <h2>Most Popular</h2>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row" id="popular-course-row">
+      </div>
+    </div>
+  </div>
+  <!-- 3. Courses content treding-->
+  <div class="container" style="padding-top: 20px;">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-12">
+          <h2>Trending Courses</h2>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row" id="trending-course-row">
+      </div>
+    </div>
+  </div>
+  <!-- 4. Footer -->
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <label>&#169; 2021 Ionic Course365. All Rights Reserved</label>
+      </div>
+      <div class="col-6">
+        <div class="d-flex flex-row-reverse">
+          <div class="col-2 text-center">
+            <a href="#">Privacy</a>
+          </div>
+          <div class="col-2 text-center">
+            <a href="#">Term</a>
+          </div>
+          <div class="col-2 text-center">
+            <a href="#">Feedback</a>
+          </div>
+          <div class="col-2 text-center">
+            <a href="#">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  "use strict"
+  //**vùng 1: vùng khai bóa biến toàn cục
+  const gRECOMMEND_COURSES_ID = [1, 2, 5, 6];
+  var gPopularCoursesArray = [];
+  var gTrendingCourseArray = [];
+  //**vùng 2: vùng gán sự kiện vào element
+  $(document).ready(function () {
+    onPageLoading();
+  })
+  //**vùng 3: event handler
+  //hàm xử lý sự kiện khi load trang
+  function onPageLoading() {
+    //truy xuất hàng cần thêm card
+    var vRecommendRow = $("#recommend-course-row");
+    var vPopularRow = $("#popular-course-row");
+    var vTrendingRow = $("#trending-course-row");
+
+    //lấy mảng các khóa học
+    var vRecommendCourseArray = recommmendCourse(gCoursesDB, gRECOMMEND_COURSES_ID);
+    popularCourse(gCoursesDB);
+    trendingCourse(gCoursesDB);
+    //hiển thi các khóa học
+    loadCourse(vRecommendCourseArray, vRecommendRow);
+    loadCourse(gPopularCoursesArray, vPopularRow);
+    loadCourse(gTrendingCourseArray, vTrendingRow);
+  }
+  //**vùng 4: vùng hàm chung
+  //hàm lấy dữ liệu cho recommend
+  function recommmendCourse(paramCourseDB, paramCourseId) {
+    var vArray = [];
+    for (var bI = 0; bI < paramCourseDB.courses.length; bI++) {
+      if (paramCourseId.includes(paramCourseDB.courses[bI].id)) {
+        vArray.push(paramCourseDB.courses[bI]);
+      }
+    }
+    return vArray;
+  }
+  //hàm lấy dữ liệu cho popular
+  function popularCourse(paramCourseDB) {
+    for (var bI = 0; bI < paramCourseDB.courses.length; bI++) {
+      if (paramCourseDB.courses[bI].isPopular) {
+        gPopularCoursesArray.push(paramCourseDB.courses[bI]);
+      }
+    }
+  }
+  //hàm lấy dữ liệu cho trending
+  function trendingCourse(paramCourseDB) {
+    for (var bI = 0; bI < paramCourseDB.courses.length; bI++) {
+      if (paramCourseDB.courses[bI].isTrending) {
+        gTrendingCourseArray.push(paramCourseDB.courses[bI]);
+      }
+    }
+  }
+
+  //hàm hiển thị course
+  function loadCourse(paramCourse, paramrow) {
+    for (var bI = 0; bI < paramCourse.length; bI++) {
+      console.log(paramCourse[bI]);
+      courseCardInfo(paramCourse[bI], paramrow);
+    }
+  }
+  //hàm hiển thị thông tin card
+  function courseCardInfo(paramCourseInfo, paramrow) {
+    paramrow.append('<div class="col-3 py-2"><div class="card"><img src=' + paramCourseInfo.coverImage + ' alt="..." class="card-img-top"><div class="card-body"><h6 class="text-primary card-title">' + paramCourseInfo.courseName + '</h6><div class="row"><div class="col-1"><i class="fa-solid fa-clock"></i></div><div class="col-10"><p>' + paramCourseInfo.duration + ' &nbsp&nbsp ' + paramCourseInfo.level + '</p></div></div><p><strong>$' + paramCourseInfo.discountPrice + '</strong> <span style="text-decoration: line-through;" class="text-muted">$' + paramCourseInfo.price + '</span></p></div><div class="card-footer bg-light"><div class="row align-items-center"><div class="col-2"><img src=' + paramCourseInfo.teacherPhoto + ' alt="..." class="rounded-circle" style="width: 300%;"></div><div class="col-8"><label>' + paramCourseInfo.teacherName + '</label></div><div class="col-2"><i class="fa-regular fa-bookmark"></i></div></div></div></div></div>')
+  }
+</script>
