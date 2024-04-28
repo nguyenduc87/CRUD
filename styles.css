@@ -1,0 +1,396 @@
+
+.nav {
+    gap: 8rem;
+    align-items: center;
+}
+
+.menu {
+    gap: 3rem;
+}
+
+.menu > li:hover > a,
+.sub-menu:hover svg,
+.sub-menu-item li:hover a {
+    color: #203656;
+    transition: 0.3s;
+}
+
+.sub-menu {
+    gap: 0.5rem;
+    position: relative;
+}
+
+.sub-menu svg {
+    width: 1.5rem;
+}
+
+.sub-menu-item {
+    position: absolute;
+    top: 100%;
+    left: -2rem;
+    background-color: #fff;
+    color: #79889e;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    width: 15rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.sub-menu:hover .sub-menu-item {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub-menu-item li {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e0dfdf;
+}
+
+.sub-menu-item li:last-child {
+    border-bottom: none;
+}
+
+.icon {
+    flex: 1;
+    gap: 5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icon-pic {
+    gap: 2rem;
+}
+
+.icon-btn {
+    gap: 2rem;
+}
+
+.style-btn, .style-nav {
+    background-color: #F54F70;
+    border: 0.1rem solid #ebebeb;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 0 0.2rem 0.3rem 0.1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.style-btn:hover,
+.style-nav:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.style-btn svg, 
+.style-nav svg {
+    color: #fff;
+}
+
+/* Thiết Lập Giao Diện Tin Tức */
+.content-pic {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.content-pic img, .overlay {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.content-pic:hover img{
+    transform: scale(1.1);
+}
+
+.content-pic:hover .content-time {
+    color: #F54F70;
+}
+
+.content-text {
+    position: absolute;
+    bottom: 4rem;
+    left: 7rem;
+    right: 7rem;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content-text button{
+    color: #fff;
+    background-color: #F54F70;
+    border: none;
+    padding: 0.7rem 1.7rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.sub-content {
+    color: #fff;
+    font-size: 4.2rem;
+    font-weight: 600;
+}
+
+.content-time {
+    color: #ebebeb;
+    gap: 2rem;
+}
+
+.main-popular {
+    border: 1px solid #ebebeb;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.popular-btn {
+    gap: 2rem;
+}
+
+.popular-btn button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    margin-bottom: 2rem;
+}
+
+.popular-btn .popular,
+.popular-btn .recent {
+    flex: 1;
+}
+
+.popular-btn .recent {
+    color: #8f9bad;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.popular-btn .popular,
+.popular-btn .recent:hover {
+    background-color: #F54F70;
+    border: 1px solid #F54F70;
+    color: #fff;
+    cursor: pointer;
+}
+
+.news-list {
+    padding: 3rem 0;
+    gap: 2rem;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.news-list:last-child {
+    border-bottom: none
+}
+
+.article {
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.article img {
+    display: block;
+    border-radius: 50%;
+    transition: 0.3s;
+    width: 7rem;
+}
+
+.article:hover img {
+    transform: scale(1.1);
+}
+
+.popular-text {
+    font-size: 1.5rem;
+    flex: 2;
+}
+
+.popular-time {
+    margin-top: 0.5rem;
+    color: #8f9bad;
+}
+
+.popular-text > p {
+    color: #203656;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.popular-text > p:hover {
+    color: #F54F70;
+    cursor: pointer;
+}
+
+/* Thiết Lập Giao Diện Popup Tìm Kiếm */
+.search-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.search-box-open {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+}
+
+.popup-close svg {
+    color: #8f9bad;
+    width: 3rem;
+}
+
+.popup-content {
+    gap: 2rem;
+    align-items: center;
+    padding: 0 10rem;
+}
+
+.popup-heading {
+    font-size: 3rem;
+    color: #203656;
+}
+
+.popup-search {
+    gap: 2rem;
+    justify-content: center;
+}
+
+.popup-search input {
+    width: 60rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.popup-search input:focus {
+    border: 1px solid #F54F70;
+    box-shadow: 0 0 4px 1px rgba(245, 79, 112, 1);
+}
+
+.popup-btn {
+    background-color: #F54F70;
+    border: none;
+    padding: 0 2rem;
+    border-radius: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-btn svg {
+    color: #fff;
+}
+
+.popup-btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Thiết Lập Giao Diện Popup Điều Hướng */
+.nav-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.nav-popup-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.nav-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 7rem 3rem 1rem;
+    box-shadow: -2px 0 5px 0px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: 0.3s;
+}
+
+.nav-popup-open {
+    visibility: visible;
+}
+
+.nav-popup-open .nav-container {
+    transform: translateX(0);
+}
+
+.nav-popup-open .nav-popup-overlay {
+    opacity: 0.7;
+}
+
+.nav-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+}
+
+.nav-logo-menu {
+    flex: 1;
+    gap: 3rem;
+}
+
+.nav-icon {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-menu li {
+    font-size: 1.3rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-menu li:hover a {
+    color: #203656;
+}
